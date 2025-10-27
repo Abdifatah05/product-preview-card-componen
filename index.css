@@ -6,6 +6,7 @@
     border: 1px solid black;
 } */
 body{
+    background-color: #f2ebe3ff;
 }
 .all{
     width: 100%;
@@ -13,23 +14,21 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 .main{
     display: flex;
     width: 100%;
     max-width: 600px;
     overflow: hidden;
+    margin-top: 200px;
 }
 .img{
     width: 50%;
-}
-.img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    background-image: url(images/image-product-desktop.jpg);
+    background-size: cover;
     border-radius: 10px 0px 0px 10px;
 }
+
 
 .content {
     background-color: white;
@@ -73,4 +72,30 @@ button:hover{
 }
 button img{
     padding: 0px 10px;
+}
+
+@media(max-width:600px){
+    .all{
+        padding: 100px 0px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .main{
+        flex-direction: column;
+        width: 90%;
+        height: 100%;
+        box-sizing: border-box;
+        margin: 0;
+    }
+    .img{
+        background-image: url(images/image-product-mobile.jpg);
+        width: 100%;
+        height: 500px;
+        border-radius: 10px 10px 0px 0px;
+    }
+    .content{
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 0px 0px 10px 10px;
+    }
 }
